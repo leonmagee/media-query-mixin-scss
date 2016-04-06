@@ -1,0 +1,33 @@
+// media query scss mixin
+
+    @mixin media_query( $prop, $default : null, $sm : null, $md : null, $lg : null ) {
+
+        @if $default != null {
+
+            #{$prop} : $default;
+        }
+
+        @if $sm != null {
+
+            @media( min-width: $screen-sm ) {
+
+                #{$prop} : $sm;
+            }
+        }
+
+        @if $md != null {
+
+            @media( min-width: $screen-md ) {
+
+                #{$prop} : $md;
+            }
+        }
+
+        @if $lg != null {
+
+            @media( min-width: $screen-lg ) {
+
+                #{$prop} : $lg;
+            }
+        }
+    }
